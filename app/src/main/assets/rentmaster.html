@@ -2,7 +2,7 @@
 <html lang="ru" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Rentlis groop</title>
 <style>
   :root{
@@ -276,6 +276,14 @@
   .nav button svg{width:23px;height:23px;}.nav button.on{color:var(--gold);}
   .nav .fab{width:58px;height:58px;border-radius:20px;margin-top:-26px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px -6px rgba(245,166,35,.55);transition:.3s var(--ease);cursor:pointer;}.nav .fab:active{transform:scale(.9) rotate(90deg);}.nav .fab svg{width:26px;height:26px;}
 
+  @media (max-width:480px){
+    body{padding:0;min-height:100vh;min-height:100dvh;background:var(--bg);}
+    .phone{width:100%;max-width:none;height:100vh;height:100dvh;max-height:none;border-radius:0;padding:0;box-shadow:none;background:var(--bg);}
+    .screen-wrap{border-radius:0;height:100%;}
+    .notch,.statusbar{display:none;}
+    .pages{padding-top:8px;}
+    .nav{bottom:16px;}
+  }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
 </style>
 </head>
