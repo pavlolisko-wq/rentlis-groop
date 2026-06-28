@@ -261,6 +261,16 @@
   .typesel .ty.on{border-color:var(--gold-2);background:var(--gold-soft);}.typesel .ty svg{width:22px;height:22px;color:var(--gold);margin-bottom:6px;}.typesel .ty span{font-size:11px;font-weight:700;display:block;line-height:1.2;}
   .sh-save{width:100%;border:0;border-radius:16px;padding:16px;font-family:var(--font);font-weight:800;font-size:15px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:var(--ink);cursor:pointer;margin-top:4px;display:flex;align-items:center;justify-content:center;gap:7px;}.sh-save:active{transform:scale(.98);}.sh-save svg{width:18px;height:18px;}
   .sh-del{width:100%;border:0;background:transparent;color:var(--red);font-family:var(--font);font-weight:700;font-size:13.5px;padding:14px;cursor:pointer;}
+  .obj-del{width:100%;border:1px solid rgba(248,113,113,.4);background:rgba(248,113,113,.08);color:var(--red);border-radius:16px;padding:15px;font-family:var(--font);font-weight:700;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:20px;}
+  .obj-del:active{transform:scale(.98);}.obj-del svg{width:18px;height:18px;}
+  .sh-del-btn{width:100%;border:0;border-radius:16px;padding:16px;font-family:var(--font);font-weight:800;font-size:15px;background:linear-gradient(135deg,#F87171,#ef4444);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;}.sh-del-btn:active{transform:scale(.98);}.sh-del-btn svg{width:18px;height:18px;}
+  .sh-cancel{width:100%;border:0;background:transparent;color:var(--muted);font-family:var(--font);font-weight:700;font-size:14px;padding:14px;cursor:pointer;}
+  .pastyears{display:flex;flex-wrap:wrap;gap:9px;}
+  .pyc{flex:0 0 auto;font-size:13px;font-weight:700;padding:11px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--line);color:var(--text);cursor:pointer;}
+  .pyc.done{border-color:var(--green);color:var(--green);background:rgba(74,222,128,.08);}
+  .pyc:active{transform:scale(.96);}
+  .logo-hint{font-size:12px;font-weight:700;color:var(--gold);margin-top:8px;cursor:pointer;}
+  .prof-av{cursor:pointer;overflow:hidden;}
   .listedit .le{display:flex;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:11px 13px;margin-bottom:9px;}
   .listedit .le .let{flex:1;}.listedit .le .let b{font-size:13.5px;font-weight:700;display:block;}.listedit .le .let span{font-size:11px;color:var(--muted);}
   .listedit .le .del{color:var(--red);cursor:pointer;width:30px;height:30px;display:flex;align-items:center;justify-content:center;}.listedit .le .del svg{width:17px;height:17px;}
@@ -329,10 +339,10 @@ var DICT={
   dealAmount:"Сумма сделки",monthly:"Месячный взнос",totalInst:"Сумма взносов",firstInst:"Дата первого взноса",editPeriods:"Периоды взносов",period:"Период",
   investAmount:"Сумма инвестиций",currentValue:"Текущая стоимость",capGrowth:"рост капитала",payback:"Окупаемость",investBlock:"Инвестиции",incomeByYears:"Доход по годам",wholePeriod:"весь период аренды",
   netProfit:"Чистая прибыль",margin:"маржа",cashflow:"Движение средств",rentPayments:"Арендные платежи",utilL:"Коммунальные",repairL:"Ремонт",taxL:"Налог на доход",
-  shareholders:"Акционеры",share:"доля",dividends:"дивиденды",dividendPct:"% дивидендов",addShareholder:"Добавить акционера",
+  shareholders:"Акционеры",share:"доля",dividends:"дивиденды",dividendPct:"% дивидендов",addShareholder:"Добавить акционера",incomePeriod:"Доход за период",roi:"Возврат инвестиций",uploadLogo:"Загрузить логотип",fillPastYears:"Аренда за прошлые годы",
   schedule:"Расписание",notes:"Заметки",tasks:"Задачи",add:"Добавить",time:"Время",heading:"Заголовок",note:"Текст",task:"Задача",address:"Адрес",district:"Район",title:"Название",
   myObjects:"Мои объекты",tenantsContracts:"Арендаторы и договоры",paymentsRem:"Платежи и напоминания",reportsExport:"Отчёты и экспорт",settings:"Настройки",assets:"активы",yieldP:"доходность",
-  language:"Язык",theme:"Тема",light:"Светлая",dark:"Тёмная",invoice:"Фактура на оплату",save:"Сохранить",delete:"Удалить",addObject:"Новый объект",type:"Тип объекта",startYear:"Год начала",amount:"Сумма",paid:"Оплачено",notPaid:"Не оплачено",
+  language:"Язык",theme:"Тема",light:"Светлая",dark:"Тёмная",invoice:"Фактура на оплату",save:"Сохранить",delete:"Удалить",deleteObject:"Удалить объект",cancel:"Отмена",addObject:"Новый объект",type:"Тип объекта",startYear:"Год начала",amount:"Сумма",paid:"Оплачено",notPaid:"Не оплачено",
   invoiceTitle:"ФАКТУРА",invObject:"Объект",invTenant:"Арендатор",invPeriod:"Период",invTax:"в т.ч. налог",invAmount:"Сумма к оплате",invPaid:"ОПЛАЧЕНО",print:"Печать / PDF",uploadComplex:"Фото жилого комплекса",wallpaper:"Обои квартиры"},
  ro:{company:"Rentlis groop",sub:"administrare și investiții",guideTitle:"Ghid Rentier",caprow:"Chirie · Investiții · Venit",
   home:"Acasă",objects:"Obiecte",finance:"Finanțe",profile:"Profil",portfolio:"Valoarea portofoliului",objs:"obiecte",mo:"lună",all:"Toate",
@@ -349,10 +359,10 @@ var DICT={
   dealAmount:"Suma tranzacției",monthly:"Rată lunară",totalInst:"Total rate",firstInst:"Data primei rate",editPeriods:"Perioade rate",period:"Perioadă",
   investAmount:"Suma investiții",currentValue:"Valoare curentă",capGrowth:"creșterea capitalului",payback:"Recuperare",investBlock:"Investiții",incomeByYears:"Venit pe ani",wholePeriod:"toată perioada",
   netProfit:"Profit net",margin:"marjă",cashflow:"Flux de numerar",rentPayments:"Plăți chirie",utilL:"Utilități",repairL:"Reparație",taxL:"Impozit pe venit",
-  shareholders:"Acționari",share:"cotă",dividends:"dividende",dividendPct:"% dividende",addShareholder:"Adaugă acționar",
+  shareholders:"Acționari",share:"cotă",dividends:"dividende",dividendPct:"% dividende",addShareholder:"Adaugă acționar",incomePeriod:"Venit total",roi:"Recuperare investiții",uploadLogo:"Încarcă logo",fillPastYears:"Chirie pe anii trecuți",
   schedule:"Program",notes:"Notițe",tasks:"Sarcini",add:"Adaugă",time:"Ora",heading:"Titlu",note:"Text",task:"Sarcină",address:"Adresă",district:"Sector",title:"Denumire",
   myObjects:"Obiectele mele",tenantsContracts:"Chiriași și contracte",paymentsRem:"Plăți și memento-uri",reportsExport:"Rapoarte și export",settings:"Setări",assets:"active",yieldP:"randament",
-  language:"Limbă",theme:"Temă",light:"Deschisă",dark:"Întunecată",invoice:"Factură de plată",save:"Salvează",delete:"Șterge",addObject:"Obiect nou",type:"Tip obiect",startYear:"Anul începerii",amount:"Sumă",paid:"Plătit",notPaid:"Neplătit",
+  language:"Limbă",theme:"Temă",light:"Deschisă",dark:"Întunecată",invoice:"Factură de plată",save:"Salvează",delete:"Șterge",deleteObject:"Șterge obiectul",cancel:"Anulează",addObject:"Obiect nou",type:"Tip obiect",startYear:"Anul începerii",amount:"Sumă",paid:"Plătit",notPaid:"Neplătit",
   invoiceTitle:"FACTURĂ",invObject:"Obiect",invTenant:"Chiriaș",invPeriod:"Perioadă",invTax:"incl. impozit",invAmount:"Suma de plată",invPaid:"PLĂTIT",print:"Printează / PDF",uploadComplex:"Foto complex",wallpaper:"Foto apartament"},
  en:{company:"Rentlis groop",sub:"management & investment",guideTitle:"Rentier Guide",caprow:"Rent · Invest · Income",
   home:"Home",objects:"Objects",finance:"Finance",profile:"Profile",portfolio:"Portfolio value",objs:"objects",mo:"mo",all:"All",
@@ -369,10 +379,10 @@ var DICT={
   dealAmount:"Deal amount",monthly:"Monthly installment",totalInst:"Installments paid",firstInst:"First installment",editPeriods:"Installment periods",period:"Period",
   investAmount:"Total invested",currentValue:"Current value",capGrowth:"capital growth",payback:"Payback",investBlock:"Investments",incomeByYears:"Income by year",wholePeriod:"whole lease period",
   netProfit:"Net profit",margin:"margin",cashflow:"Cash flow",rentPayments:"Rent payments",utilL:"Utilities",repairL:"Repairs",taxL:"Income tax",
-  shareholders:"Shareholders",share:"share",dividends:"dividends",dividendPct:"dividend %",addShareholder:"Add shareholder",
+  shareholders:"Shareholders",share:"share",dividends:"dividends",dividendPct:"dividend %",addShareholder:"Add shareholder",incomePeriod:"Total income",roi:"Return on investment",uploadLogo:"Upload logo",fillPastYears:"Rent for past years",
   schedule:"Schedule",notes:"Notes",tasks:"Tasks",add:"Add",time:"Time",heading:"Heading",note:"Text",task:"Task",address:"Address",district:"District",title:"Title",
   myObjects:"My objects",tenantsContracts:"Tenants & contracts",paymentsRem:"Payments & reminders",reportsExport:"Reports & export",settings:"Settings",assets:"assets",yieldP:"yield",
-  language:"Language",theme:"Theme",light:"Light",dark:"Dark",invoice:"Rent invoice",save:"Save",delete:"Delete",addObject:"New object",type:"Object type",startYear:"Start year",amount:"Amount",paid:"Paid",notPaid:"Unpaid",
+  language:"Language",theme:"Theme",light:"Light",dark:"Dark",invoice:"Rent invoice",save:"Save",delete:"Delete",deleteObject:"Delete object",cancel:"Cancel",addObject:"New object",type:"Object type",startYear:"Start year",amount:"Amount",paid:"Paid",notPaid:"Unpaid",
   invoiceTitle:"INVOICE",invObject:"Object",invTenant:"Tenant",invPeriod:"Period",invTax:"incl. tax",invAmount:"Amount due",invPaid:"PAID",print:"Print / PDF",uploadComplex:"Complex photo",wallpaper:"Apartment photo"}
 };
 function t(k){return (DICT[S.lang]&&DICT[S.lang][k])||DICT.ru[k]||k;}
@@ -414,7 +424,7 @@ function syOf(p){return p.startDate?parseInt(p.startDate.split(".")[2]):(p.first
 function buildPeriods(first,a,total,paidN){var pr=first.split("."),d=+pr[0],mo=+pr[1],y=+pr[2],arr=[];for(var i=0;i<total;i++){var mm=mo+i,yy=y+Math.floor((mm-1)/12),m2=((mm-1)%12)+1;arr.push({date:pad(d)+"."+pad(m2)+"."+yy,amount:a,paid:i<paidN});}return arr;}
 function mkRent(o){return {id:o.id,type:o.type,title:o.title,district:o.district,addr:o.addr,area:o.area,rent:o.rent,purchase:o.purchase,market:o.market,status:o.status,tenant:o.status==="ok"?{name:o.tn,citizenship:o.tc}:null,utils:o.utils,repair:o.repair,startDate:o.start,payDay:o.payDay,tax:{on:true,manual:null,cur:"EUR",pct:7},wall:null,complex:null,note:"",payDates:{},pay:fullHist(o.rent,parseInt(o.start.split(".")[2]))};}
 
-var S={cur:"EUR",lang:"ru",theme:"dark",
+var S={cur:"EUR",lang:"ru",theme:"dark",logo:null,
  schedule:[{tm:"14:00",ttl:"Показ квартиры",sub:"Cuza Vodă 30 · Botanica"},{tm:"16:30",ttl:"Подписание договора",sub:"Centru · Ион Мунтяну"}],
  notes:[{ttl:"Передать ключи",sub:"Buiucani · новый арендатор"},{ttl:"Снять показания счётчиков",sub:"до 30.06"}],
  tasks:[{tx:"Собрать аренду",done:true},{tx:"Оплатить коммуналку",done:false},{tx:"Продлить договор",done:false}],
@@ -481,6 +491,8 @@ function renderHome(){
    +mcard(I.crane,investProps().length,t("inInvest"))
    +mcard(I.wallet,money(monthIncome()),t("incomeMonth"))
    +mcard(I.trend,money(yearIncome(CUR_Y)),t("incomeYear"))
+   +mcard(I.coins,money(totalCollected()),t("incomePeriod"))
+   +mcard(I.pie,(investedAmount()?Math.round(totalCollected()/investedAmount()*100):0)+'%',t("roi"))
  +'</div>'
  +'<div class="sec stagger"><h3>'+t("objects")+'</h3><a data-go="props">'+t("all")+' →</a></div>'
  +'<div class="stagger" id="homeList">'+objs+'</div>';
@@ -495,7 +507,7 @@ var propFilter="all";
 function renderProps(){
  var chips=[["all",t("all")],["flat",t("apartments")],["parking",t("parking")],["construction",t("construction")],["no",t("vacant")]];
  el("props").innerHTML=
- '<div class="head stagger"><div class="hi">'+t("portfolio")+'<b>'+t("objects")+'</b></div><div class="avatar">ПЛ</div></div>'
+ '<div class="head stagger"><div class="hi">'+t("portfolio")+'<b>'+t("objects")+'</b></div><div class="avatar"'+(S.logo?' style="background-image:url('+S.logo+');background-size:cover;background-position:center;"':'')+'>'+(S.logo?'':'ПЛ')+'</div></div>'
  +'<div class="search stagger">'+svg(I.search)+'<input id="propSearch" placeholder="'+t("searchPh")+'"></div>'
  +'<div class="chips stagger">'+chips.map(function(c){return '<div class="chip '+(propFilter===c[0]?"on":"")+'" data-f="'+c[0]+'">'+c[1]+'</div>';}).join("")+'</div>'
  +'<div class="stagger" id="propList"></div>';
@@ -564,7 +576,7 @@ function renderProfile(){
  var nt=S.notes.map(function(it){return '<div class="note">'+it.ttl+(it.sub?'<small>'+it.sub+'</small>':'')+'</div>';}).join("");
  var tk=S.tasks.map(function(it,i){return '<div class="y-task'+(it.done?' done':'')+'" data-task="'+i+'"><div class="y-box">'+svg(I.tick,3)+'</div><div class="tx">'+it.tx+'</div></div>';}).join("");
  el("prof").innerHTML=
- '<div class="prof-head stagger"><div class="prof-av">ПЛ</div><div class="nm">Павел Лиско</div><div class="em">rentier · Кишинёв, MD</div></div>'
+ '<div class="prof-head stagger"><div class="prof-av" id="profLogo"'+(S.logo?' style="background-image:url('+S.logo+');background-size:cover;background-position:center;"':'')+'>'+(S.logo?'':svg(I.cam))+'</div>'+(S.logo?'':'<div class="logo-hint" id="profLogoHint">'+t("uploadLogo")+'</div>')+'<div class="nm">Павел Лиско</div><div class="em">rentier · Кишинёв, MD</div></div>'
  +'<div class="prof-stats stagger"><div><b>'+S.props.length+'</b><span>'+t("objs")+'</span></div><div><b>'+moneyShort(portfolioValue())+'</b><span>'+t("assets")+'</span></div><div><b>6,4%</b><span>'+t("yieldP")+'</span></div></div>'
  +'<div class="sec stagger" style="margin-top:6px;"><h3>'+t("shareholders")+'</h3><a data-add-sh>+ '+t("add")+'</a></div>'
  +'<div class="stagger" id="shList">'+sh+'</div>'
@@ -582,6 +594,7 @@ function renderProfile(){
  el("prof").querySelectorAll("[data-add]").forEach(function(b){b.onclick=function(){addListItemSheet(this.getAttribute("data-add"));};});
  el("prof").querySelectorAll("[data-sh]").forEach(function(b){b.onclick=function(){editShareholder(+this.getAttribute("data-sh"));};});
  var asb=el("prof").querySelector("[data-add-sh]");if(asb)asb.onclick=function(){editShareholder(-1);};
+ var pl=el("profLogo");if(pl)pl.onclick=uploadLogo;var plh=el("profLogoHint");if(plh)plh.onclick=uploadLogo;
 }
 function mi(ic,l,a){return '<div class="menu-item" data-m="'+a+'"><div class="mi">'+svg(ic)+'</div><div class="ml">'+l+'</div><div class="ar">'+svg('<path d="M9 18l6-6-6-6"/>')+'</div></div>';}
 function shRow(x,i){return '<div class="shrow" data-sh="'+i+'"><div class="sa">'+initials(x.name)+'</div><div class="si"><b>'+x.name+'</b><span>'+t("share")+' '+x.share+'% · '+t("dividends")+' '+x.divPct+'%</span><div class="share-bar"><i style="width:'+x.share+'%"></i></div></div><div class="sv"><b>'+money(x.cur==="MDL"?x.divAmt/RATE:x.divAmt)+'</b><span>'+t("dividends")+'/'+t("mo")+'</span></div></div>';}
@@ -617,6 +630,8 @@ function detailRented(p){
   +'<div class="opt"><div class="oi">'+svg(I.tax)+'</div><div class="ol" id="taxEdit"><b>'+t("rentalTax")+'</b><span>'+taxSub+'</span></div><div class="sw '+(p.tax.on?"on":"")+'" id="taxSw"></div></div>'
   +'<div class="opt"><div class="oi">'+svg(I.cal)+'</div><div class="ol" id="leaseEdit"><b>'+t("leaseStart")+'</b><span>'+(p.startDate||"—")+' · '+t("payDay")+' '+(p.payDay||5)+' '+t("ofMonth")+'</span></div></div>'
   +'<h4 class="dh">'+t("payCalendar")+'</h4>'+paymentCalendar(p,st)
+  +pastYearsBlock(p,sy)
+  +'<button class="obj-del" id="objDel">'+svg(I.trash)+' '+t("deleteObject")+'</button>'
   +'</div>';
 }
 function detailConstruction(p){
@@ -628,6 +643,7 @@ function detailConstruction(p){
   +'<div class="d-kpis" style="margin-top:14px;"><div class="d-kpi" data-f="dealAmount"><b>'+moneyShort(p.dealAmount)+'</b><span>'+t("dealAmount")+'</span></div><div class="d-kpi" data-f="monthly"><b>'+money(p.monthly)+'</b><span>'+t("monthly")+'</span></div><div class="d-kpi" data-f="firstInst"><b style="font-size:12px;">'+p.firstInst+'</b><span>'+t("firstInst")+'</span></div></div>'
   +'<h4 class="dh">'+t("uploadComplex")+'</h4><div class="complex-ph" id="cph" '+(p.complex?'style="background-image:url('+p.complex+')"':"")+'>'+(p.complex?"":svg(I.cam)+t("uploadComplex"))+'</div>'
   +'<h4 class="dh">'+t("editPeriods")+'</h4><div class="card periods" style="padding:4px 16px;">'+rows+'</div>'
+  +'<button class="obj-del" id="objDel">'+svg(I.trash)+' '+t("deleteObject")+'</button>'
   +'</div>';
 }
 function optRow(ic,name,sub,key,on){return '<div class="opt"><div class="oi">'+svg(ic)+'</div><div class="ol"><b>'+name+'</b><span>'+sub+'</span></div><div class="sw '+(on?"on":"")+'" data-opt="'+key+'"></div></div>';}
@@ -650,15 +666,25 @@ function wireDetail(p){
  var le=el("leaseEdit");if(le)le.onclick=function(){editLease(p);};
  el("detail").querySelectorAll(".cell:not(.future)").forEach(function(c){c.onclick=function(){editPayment(p,+this.getAttribute("data-y"),+this.getAttribute("data-m"));};});
  el("detail").querySelectorAll("[data-fy]").forEach(function(c){c.onclick=function(){bulkFillYear(p,+this.getAttribute("data-fy"));};});
+ el("detail").querySelectorAll("[data-py]").forEach(function(c){c.onclick=function(){bulkFillYear(p,+this.getAttribute("data-py"));};});
  el("detail").querySelectorAll("[data-opt]").forEach(function(s){s.onclick=function(){p[this.getAttribute("data-opt")]=!p[this.getAttribute("data-opt")];renderDetail();};});
  el("detail").querySelectorAll("[data-f]").forEach(function(k){k.onclick=function(){editField(p,this.getAttribute("data-f"));};});
  el("detail").querySelectorAll("[data-per]").forEach(function(r){r.onclick=function(){editPeriod(p,+this.getAttribute("data-per"));};});
  var pp=el("pcalPay");if(pp)pp.onclick=function(){recordPayment(p);};
  var pn=el("pcalNote");if(pn)pn.onclick=function(){editObjNote(p);};
+ var od=el("objDel");if(od)od.onclick=function(){deleteObject(p);};
 }
 
 /* ---------- editing actions ---------- */
 function recordPayment(p){for(var y=syOf(p);y<=CUR_Y;y++){for(var m=1;m<=12;m++){if(y==CUR_Y&&m>CUR_M)break;if(!p.pay[y])p.pay[y]={};if(!p.pay[y][m]){p.pay[y][m]=p.rent;renderDetail();renderHome();return;}}}renderDetail();}
+function deleteObject(p){
+ openSheet(t("deleteObject"),
+  '<div style="font-size:14px;color:var(--muted);margin:2px 0 18px;line-height:1.5;"><b style="color:var(--text);font-size:15px;">'+p.title+'</b><br>str. '+p.addr+'</div>'
+  +'<button class="sh-del-btn" id="delYes">'+svg(I.trash)+' '+t("delete")+'</button>'
+  +'<button class="sh-cancel" id="delNo">'+t("cancel")+'</button>');
+ el("delYes").onclick=function(){var i=S.props.indexOf(p);if(i>-1)S.props.splice(i,1);closeSheet();closeDetail();renderAll();};
+ el("delNo").onclick=closeSheet;
+}
 function recordInstallment(p){for(var i=0;i<p.periods.length;i++){if(!p.periods[i].paid){p.periods[i].paid=true;break;}}renderDetail();}
 function editPayment(p,y,m){
  var cur=p.pay[y]&&p.pay[y][m];var date=(p.payDates[y]&&p.payDates[y][m])||(pad(p.payDay||5)+"."+pad(m)+"."+y);
@@ -719,6 +745,8 @@ function editLease(p){
 function editObjNote(p){openSheet(t("addNote"),'<div class="fld"><label>'+t("note")+'</label><textarea id="onote">'+(p.note||"")+'</textarea></div><button class="sh-save" id="onS">'+t("save")+'</button>');el("onS").onclick=function(){p.note=el("onote").value;closeSheet();};}
 
 function uploadImage(p,key){var inp=document.createElement("input");inp.type="file";inp.accept="image/*";inp.onchange=function(){var f=inp.files[0];if(!f)return;var r=new FileReader();r.onload=function(){p[key]=r.result;renderDetail();renderHome();if(document.querySelector(".page.active").id==="props")fillPropList(el("propSearch")?el("propSearch").value:"");};r.readAsDataURL(f);};inp.click();}
+function uploadLogo(){var inp=document.createElement("input");inp.type="file";inp.accept="image/*";inp.onchange=function(){var f=inp.files[0];if(!f)return;var r=new FileReader();r.onload=function(){S.logo=r.result;renderAll();};r.readAsDataURL(f);};inp.click();}
+function pastYearsBlock(p,sy){if(sy>=CUR_Y)return"";var out='<h4 class="dh">'+t("fillPastYears")+'</h4><div class="pastyears">';for(var y=sy;y<CUR_Y;y++){var done=p.pay[y]&&Object.keys(p.pay[y]).length>=12;out+='<div class="pyc'+(done?" done":"")+'" data-py="'+y+'">'+y+(done?" ✓":"")+'</div>';}return out+'</div>';}
 
 /* ---------- sheets ---------- */
 function openSheet(title,html){el("shTitle").textContent=title;el("shBody").innerHTML=html;el("scrim").classList.add("open");el("sheet").classList.add("open");}
