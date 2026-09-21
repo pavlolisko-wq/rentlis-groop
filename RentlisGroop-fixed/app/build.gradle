@@ -23,7 +23,7 @@ android {
         targetSdk 34
         // versionCode must grow with every release; the cloud build number keeps it increasing automatically
         versionCode 100 + (System.getenv("GITHUB_RUN_NUMBER") ?: "0").toInteger()
-        versionName "1.6"
+        versionName "1.7"
     }
     buildTypes {
         debug {

@@ -517,7 +517,7 @@
 
   /* v1.6: smaller home photo, bottom tiles, all-time finance, app lock */
   #home{overflow-y:auto;overflow-x:hidden;}
-  .deck{flex:none;height:clamp(220px,36vh,310px);min-height:0;margin-top:14px;}
+  .deck{flex:none;height:clamp(190px,29vh,260px);min-height:0;margin-top:12px;}
   .dcard{border-radius:28px;}
   .dbot{left:18px;right:18px;bottom:18px;}
   .dbot .dt{font-size:24px;margin-bottom:10px;letter-spacing:-.8px;}
@@ -525,12 +525,12 @@
   .dm{font-size:12px;gap:5px;}
   .dtop{top:12px;left:12px;right:12px;}
   .dempty{border-radius:28px;}
-  .htiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px;flex:none;}
-  .ht{display:flex;align-items:center;gap:12px;padding:14px;border-radius:22px;background:rgba(13,58,47,.55);border:1px solid rgba(217,178,124,.28);backdrop-filter:blur(8px);min-width:0;}
-  .ht-ic{width:40px;height:40px;border-radius:50%;background:var(--metal);color:#082B23;display:flex;align-items:center;justify-content:center;flex:0 0 40px;}.ht-ic svg{width:19px;height:19px;}
+  .htiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;flex:none;}.ht.wide{grid-column:1/-1;}
+  .ht{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:22px;background:rgba(13,58,47,.55);border:1px solid rgba(217,178,124,.28);backdrop-filter:blur(8px);min-width:0;}
+  .ht-ic{width:36px;height:36px;border-radius:50%;background:var(--metal);color:#082B23;display:flex;align-items:center;justify-content:center;flex:0 0 36px;}.ht-ic svg{width:17px;height:17px;}
   .ht>div{min-width:0;}
-  .ht small{display:block;font-size:11.5px;color:var(--muted);font-weight:600;margin-bottom:2px;white-space:nowrap;}
-  .ht b{display:block;font-size:20px;font-weight:800;letter-spacing:-.5px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .ht small{display:block;font-size:11px;color:var(--muted);font-weight:600;margin-bottom:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .ht b{display:block;font-size:18px;font-weight:800;letter-spacing:-.5px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   :root[data-theme="light"] .ht{background:rgba(255,255,255,.75);}:root[data-theme="light"] .ht b{color:#082B23;}
   .perbar{flex-wrap:wrap;row-gap:8px;}.pb-nav b{min-width:96px;}.perbar .seg{margin-left:auto;}
   .bars{justify-content:center;}.bar{max-width:64px;}
@@ -596,7 +596,7 @@ var DICT={
   rentalTax:"Налог на аренду",taxAuto:"авто 7%",taxManual:"вручную",
   leaseStart:"Начало аренды",payDay:"оплата до",ofMonth:"числа",fillYear:"Заполнить год",payDate:"Дата платежа",m2:"м²",dateFmt:"дд.мм.гггг",profTag:"рантье · Кишинёв, MD",langTitle:"Язык",addExpense:"Расход",otherL:"Прочее",generalObj:"Общий",periodMonth:"Месяц",periodYear:"Год",emptyObjs:"Пока нет объектов",emptyObjsSub:"Нажмите «+» или кнопку ниже, чтобы добавить первый объект",expense:"Расход",month:"Месяц",year:"Год",factsTitle:"ПАРАМЕТРЫ ОБЪЕКТА",payDueTitle:"Пора получить платёж",payConfirm:"Платёж получен",payConfirmAll:"Подтвердить все",payLater:"Напомнить позже",notifOn:"Уведомления об оплате",
   dealAmount:"Сумма сделки",monthly:"Месячный взнос",totalInst:"Сумма взносов",firstInst:"Дата первого взноса",editPeriods:"Периоды взносов",period:"Период",
-  investAmount:"Сумма инвестиций",currentValue:"Текущая стоимость",capGrowth:"рост капитала",payback:"Окупаемость",investBlock:"Инвестиции",incomeByYears:"Доход по годам",periodAll:"Всего",allTime:"За весь период",incomeAll:"Собрано всего",recoup:"Возврат затрат на покупку",purchaseCost:"Покупка",collectedAll:"Собрано оплат",remain:"Осталось вернуть",recoupNet:"С учётом налога и расходов",homeObjs:"Объектов",homeRent:"Рента в месяц",lockSec:"Защита входа (PIN)",lockChange:"Сменить PIN",lockBio:"Вход по отпечатку",lockEnter:"Введите PIN",lockNew:"Придумайте PIN (4 цифры)",lockRepeat:"Повторите PIN",lockWrong:"Неверный PIN",lockMismatch:"PIN-коды не совпали",lockWait:"Слишком много попыток. Подождите {n} с",lockBioTitle:"Вход в Rentlis groop",lockUsePin:"Ввести PIN",lockCancel:"Отмена",wholePeriod:"весь период аренды",
+  investAmount:"Сумма инвестиций",currentValue:"Текущая стоимость",capGrowth:"рост капитала",payback:"Окупаемость",investBlock:"Инвестиции",incomeByYears:"Доход по годам",taxFixed:"Налог в месяц (фиксированный)",taxSince:"Налог платится с (мм.гггг или дд.мм.гггг)",taxSinceHint:"Все месяцы с этой даты по сегодня суммируются в налоги за год и за весь период.",taxPaidTotal:"Налогов уплачено",taxPerMo:"в мес.",taxFrom:"с",homeRentYear:"Аренда за год",homeTaxYear:"Налоги за год",homeInvYear:"Инвестиции за год",modeYear:"Сумма за год",modeMonth:"В месяц",yearSumLbl:"Сумма за год (€)",perMonthLbl:"Сумма в месяц (€)",yearFillHint:"Сумма поровну распределится на {n} мес.; итог за год будет ровно таким, как вы внесли.",periodAll:"Всего",allTime:"За весь период",incomeAll:"Собрано всего",recoup:"Возврат затрат на покупку",purchaseCost:"Покупка",collectedAll:"Собрано оплат",remain:"Осталось вернуть",recoupNet:"С учётом налога и расходов",homeObjs:"Объектов",homeRent:"Рента в месяц",lockSec:"Защита входа (PIN)",lockChange:"Сменить PIN",lockBio:"Вход по отпечатку",lockEnter:"Введите PIN",lockNew:"Придумайте PIN (4 цифры)",lockRepeat:"Повторите PIN",lockWrong:"Неверный PIN",lockMismatch:"PIN-коды не совпали",lockWait:"Слишком много попыток. Подождите {n} с",lockBioTitle:"Вход в Rentlis groop",lockUsePin:"Ввести PIN",lockCancel:"Отмена",wholePeriod:"весь период аренды",
   netProfit:"Чистая прибыль",margin:"маржа",cashflow:"Движение средств",rentPayments:"Арендные платежи",utilL:"Коммунальные",repairL:"Ремонт",taxL:"Налог на доход",
   shareholders:"Акционеры",share:"доля",dividends:"дивиденды",dividendPct:"% дивидендов",addShareholder:"Добавить акционера",incomePeriod:"Доход за период",roi:"Возврат инвестиций",uploadLogo:"Загрузить логотип",fillPastYears:"Аренда за прошлые годы",back:"Назад",distributeYear:"Распределится на все месяцы года",yearTotalHint:"Внесённые месяцы суммируются автоматически",payCalFin:"Календарь оплат",reminder:"Напоминание",dueOn:"оплата до",addReminder:"День оплаты и напоминание",remindOn:"Напоминать об оплате",filterObjects:"Объекты",allObjects:"Все объекты",apply:"Применить",selected:"выбрано",resetData:"Сбросить данные",homeBgTitle:"Фон главной",uploadBg:"Загрузить фон",replaceBg:"Заменить фон",removeBg:"Убрать фон",
   schedule:"Расписание",notes:"Заметки",tasks:"Задачи",add:"Добавить",time:"Время",heading:"Заголовок",note:"Текст",task:"Задача",address:"Адрес",district:"Район",title:"Название",
@@ -616,7 +616,7 @@ var DICT={
   rentalTax:"Impozit pe chirie",taxAuto:"auto 7%",taxManual:"manual",
   leaseStart:"Început chirie",payDay:"plata până la",ofMonth:"a lunii",fillYear:"Completează anul",payDate:"Data plății",m2:"m²",dateFmt:"zz.ll.aaaa",profTag:"rentier · Chișinău, MD",langTitle:"Limba",addExpense:"Cheltuială",otherL:"Altele",generalObj:"General",periodMonth:"Lună",periodYear:"An",emptyObjs:"Încă nu sunt obiecte",emptyObjsSub:"Apăsați «+» sau butonul de mai jos pentru a adăuga primul obiect",expense:"Cheltuială",month:"Luna",year:"Anul",factsTitle:"DETALII OBIECT",payDueTitle:"E timpul să încasați plata",payConfirm:"Plata primită",payConfirmAll:"Confirmă toate",payLater:"Mai târziu",notifOn:"Notificări despre plăți",
   dealAmount:"Suma tranzacției",monthly:"Rată lunară",totalInst:"Total rate",firstInst:"Data primei rate",editPeriods:"Perioade rate",period:"Perioadă",
-  investAmount:"Suma investiții",currentValue:"Valoare curentă",capGrowth:"creșterea capitalului",payback:"Recuperare",investBlock:"Investiții",incomeByYears:"Venit pe ani",periodAll:"Total",allTime:"Pe toată perioada",incomeAll:"Total încasat",recoup:"Recuperarea costului de achiziție",purchaseCost:"Achiziție",collectedAll:"Plăți încasate",remain:"Rămas de recuperat",recoupNet:"După impozit și cheltuieli",homeObjs:"Obiecte",homeRent:"Chirie pe lună",lockSec:"Protecție acces (PIN)",lockChange:"Schimbă PIN-ul",lockBio:"Autentificare cu amprentă",lockEnter:"Introdu PIN-ul",lockNew:"Creează un PIN (4 cifre)",lockRepeat:"Repetă PIN-ul",lockWrong:"PIN incorect",lockMismatch:"PIN-urile nu coincid",lockWait:"Prea multe încercări. Așteaptă {n} s",lockBioTitle:"Autentificare în Rentlis groop",lockUsePin:"Introdu PIN",lockCancel:"Anulează",wholePeriod:"toată perioada",
+  investAmount:"Suma investiții",currentValue:"Valoare curentă",capGrowth:"creșterea capitalului",payback:"Recuperare",investBlock:"Investiții",incomeByYears:"Venit pe ani",taxFixed:"Impozit pe lună (fix)",taxSince:"Impozit plătit din (ll.aaaa sau zz.ll.aaaa)",taxSinceHint:"Toate lunile de la această dată până azi se însumează în impozitele pe an și pe toată perioada.",taxPaidTotal:"Impozit plătit total",taxPerMo:"/lună",taxFrom:"din",homeRentYear:"Chirie pe an",homeTaxYear:"Impozite pe an",homeInvYear:"Investiții pe an",modeYear:"Suma pe an",modeMonth:"Pe lună",yearSumLbl:"Suma pe an (€)",perMonthLbl:"Suma pe lună (€)",yearFillHint:"Suma se împarte egal pe {n} luni; totalul anului va fi exact cel introdus.",periodAll:"Total",allTime:"Pe toată perioada",incomeAll:"Total încasat",recoup:"Recuperarea costului de achiziție",purchaseCost:"Achiziție",collectedAll:"Plăți încasate",remain:"Rămas de recuperat",recoupNet:"După impozit și cheltuieli",homeObjs:"Obiecte",homeRent:"Chirie pe lună",lockSec:"Protecție acces (PIN)",lockChange:"Schimbă PIN-ul",lockBio:"Autentificare cu amprentă",lockEnter:"Introdu PIN-ul",lockNew:"Creează un PIN (4 cifre)",lockRepeat:"Repetă PIN-ul",lockWrong:"PIN incorect",lockMismatch:"PIN-urile nu coincid",lockWait:"Prea multe încercări. Așteaptă {n} s",lockBioTitle:"Autentificare în Rentlis groop",lockUsePin:"Introdu PIN",lockCancel:"Anulează",wholePeriod:"toată perioada",
   netProfit:"Profit net",margin:"marjă",cashflow:"Flux de numerar",rentPayments:"Plăți chirie",utilL:"Utilități",repairL:"Reparație",taxL:"Impozit pe venit",
   shareholders:"Acționari",share:"cotă",dividends:"dividende",dividendPct:"% dividende",addShareholder:"Adaugă acționar",incomePeriod:"Venit total",roi:"Recuperare investiții",uploadLogo:"Încarcă logo",fillPastYears:"Chirie pe anii trecuți",back:"Înapoi",distributeYear:"Se distribuie pe toate lunile anului",yearTotalHint:"Lunile introduse se însumează automat",payCalFin:"Calendar plăți",reminder:"Memento",dueOn:"plata până la",addReminder:"Zi de plată și memento",remindOn:"Amintește de plată",filterObjects:"Obiecte",allObjects:"Toate obiectele",apply:"Aplică",selected:"selectate",resetData:"Resetează datele",homeBgTitle:"Fundal Acasă",uploadBg:"Încarcă fundal",replaceBg:"Schimbă fundalul",removeBg:"Elimină fundalul",
   schedule:"Program",notes:"Notițe",tasks:"Sarcini",add:"Adaugă",time:"Ora",heading:"Titlu",note:"Text",task:"Sarcină",address:"Adresă",district:"Sector",title:"Denumire",
@@ -636,7 +636,7 @@ var DICT={
   rentalTax:"Rental tax",taxAuto:"auto 7%",taxManual:"manual",
   leaseStart:"Lease start",payDay:"due by",ofMonth:"th",fillYear:"Fill year",payDate:"Payment date",m2:"m²",dateFmt:"dd.mm.yyyy",profTag:"landlord · Chișinău, MD",langTitle:"Language",addExpense:"Expense",otherL:"Other",generalObj:"General",periodMonth:"Month",periodYear:"Year",emptyObjs:"No objects yet",emptyObjsSub:"Tap “+” or the button below to add your first object",expense:"Expense",month:"Month",year:"Year",factsTitle:"PROPERTY FACTS",payDueTitle:"Time to collect rent",payConfirm:"Payment received",payConfirmAll:"Confirm all",payLater:"Remind me later",notifOn:"Payment notifications",
   dealAmount:"Deal amount",monthly:"Monthly installment",totalInst:"Installments paid",firstInst:"First installment",editPeriods:"Installment periods",period:"Period",
-  investAmount:"Total invested",currentValue:"Current value",capGrowth:"capital growth",payback:"Payback",investBlock:"Investments",incomeByYears:"Income by year",periodAll:"Total",allTime:"All time",incomeAll:"Total collected",recoup:"Purchase cost recovered",purchaseCost:"Purchase",collectedAll:"Payments collected",remain:"Left to recover",recoupNet:"After tax and expenses",homeObjs:"Properties",homeRent:"Rent per month",lockSec:"App lock (PIN)",lockChange:"Change PIN",lockBio:"Fingerprint unlock",lockEnter:"Enter PIN",lockNew:"Create a PIN (4 digits)",lockRepeat:"Repeat PIN",lockWrong:"Wrong PIN",lockMismatch:"PINs do not match",lockWait:"Too many attempts. Wait {n} s",lockBioTitle:"Unlock Rentlis groop",lockUsePin:"Use PIN",lockCancel:"Cancel",wholePeriod:"whole lease period",
+  investAmount:"Total invested",currentValue:"Current value",capGrowth:"capital growth",payback:"Payback",investBlock:"Investments",incomeByYears:"Income by year",taxFixed:"Tax per month (fixed)",taxSince:"Tax paid since (mm.yyyy or dd.mm.yyyy)",taxSinceHint:"Every month from this date until today is summed into the yearly and all-time tax totals.",taxPaidTotal:"Tax paid in total",taxPerMo:"/mo",taxFrom:"since",homeRentYear:"Rent this year",homeTaxYear:"Taxes this year",homeInvYear:"Invested this year",modeYear:"Year total",modeMonth:"Per month",yearSumLbl:"Year total (€)",perMonthLbl:"Amount per month (€)",yearFillHint:"The amount is split evenly over {n} months; the year total will be exactly what you entered.",periodAll:"Total",allTime:"All time",incomeAll:"Total collected",recoup:"Purchase cost recovered",purchaseCost:"Purchase",collectedAll:"Payments collected",remain:"Left to recover",recoupNet:"After tax and expenses",homeObjs:"Properties",homeRent:"Rent per month",lockSec:"App lock (PIN)",lockChange:"Change PIN",lockBio:"Fingerprint unlock",lockEnter:"Enter PIN",lockNew:"Create a PIN (4 digits)",lockRepeat:"Repeat PIN",lockWrong:"Wrong PIN",lockMismatch:"PINs do not match",lockWait:"Too many attempts. Wait {n} s",lockBioTitle:"Unlock Rentlis groop",lockUsePin:"Use PIN",lockCancel:"Cancel",wholePeriod:"whole lease period",
   netProfit:"Net profit",margin:"margin",cashflow:"Cash flow",rentPayments:"Rent payments",utilL:"Utilities",repairL:"Repairs",taxL:"Income tax",
   shareholders:"Shareholders",share:"share",dividends:"dividends",dividendPct:"dividend %",addShareholder:"Add shareholder",incomePeriod:"Total income",roi:"Return on investment",uploadLogo:"Upload logo",fillPastYears:"Rent for past years",back:"Back",distributeYear:"Spreads across all months of the year",yearTotalHint:"Entered months are summed automatically",payCalFin:"Payment calendar",reminder:"Reminder",dueOn:"due by",addReminder:"Payment day & reminder",remindOn:"Remind about payment",filterObjects:"Objects",allObjects:"All objects",apply:"Apply",selected:"selected",resetData:"Reset data",homeBgTitle:"Home background",uploadBg:"Upload background",replaceBg:"Replace background",removeBg:"Remove background",
   schedule:"Schedule",notes:"Notes",tasks:"Tasks",add:"Add",time:"Time",heading:"Heading",note:"Text",task:"Task",address:"Address",district:"District",title:"Title",
@@ -719,11 +719,14 @@ function yearIncome(y){var s=0;S.props.forEach(function(p){if(p.pay&&p.pay[y]){f
 function totalCollected(){var s=0;S.props.forEach(function(p){if(p.pay){for(var y in p.pay)for(var m in p.pay[y])s+=p.pay[y][m];}});return s;}
 function minYear(){var y=CUR_Y;S.props.forEach(function(p){var sy=syOf(p);if(sy<y)y=sy;});return y;}
 function taxMonthly(p){if(!p.tax||!p.tax.on)return 0;if(p.tax.manual!=null)return p.tax.cur==="MDL"?p.tax.manual/RATE:p.tax.manual;return (p.rent||0)*(p.tax.pct||7)/100;}
-function yearTax(y){var s=0;S.props.forEach(function(p){if(p.tax&&p.tax.on&&p.pay&&p.pay[y]){s+=taxMonthly(p)*Object.keys(p.pay[y]).length;}});return s;}
-function objPayback(p){var base=p.purchase||p.dealAmount||0;if(!base)return 0;var col=0;if(p.pay){for(var y in p.pay)for(var m in p.pay[y])col+=p.pay[y][m];}return Math.round((col+((p.market||0)-base))/base*100);}
+function taxSinceIdx(p){var v=(p.tax&&p.tax.since||"").trim();if(!v)return null;var a=v.split("."),y,m;if(a.length===3){y=+a[2];m=+a[1];}else if(a.length===2){y=+a[1];m=+a[0];}else return null;if(!(y>1990&&y<2200&&m>=1&&m<=12))return null;return y*12+m;}
+function taxDue(p,y,m){var t0=taxSinceIdx(p);if(t0==null)return(p.pay&&p.pay[y]&&p.pay[y][m])?1:0;var i=y*12+m;return(i>=t0&&i<=CUR_Y*12+CUR_M)?1:0;}
+function taxTotalOf(p){if(!(p.tax&&p.tax.on))return 0;var t0=taxSinceIdx(p),tm=taxMonthly(p);if(t0!=null)return Math.max(0,CUR_Y*12+CUR_M-t0+1)*tm;var n=0;if(p.pay)for(var y in p.pay)for(var m in p.pay[y])if(p.pay[y][m])n++;return n*tm;}
+function yearTax(y){return taxIn(S.props,y,0);}
+function objPayback(p){var base=p.purchase||p.dealAmount||0;if(!base)return 0;var col=0;if(p.pay){for(var y in p.pay)for(var m in p.pay[y])col+=p.pay[y][m];}return Math.round(col/base*1000)/10;}
 function payStatus(p){if(p.type==="construction")return"invest";if(p.status!=="ok")return"vacant";if(p.pay[CUR_Y]&&p.pay[CUR_Y][CUR_M])return"paid";return DEMO_DAY<=effDay(p)?"pending":"overdue";}
 function leaseYM(p){var d=(p.startDate||"").split(".");return d.length===3?{y:+d[2],m:+d[1]}:{y:syOf(p),m:1};}
-function payStats(p){var paid=0,total=0,sum=0;if(!p.pay)return{paid:0,total:0,sum:0,rate:0};var ls=leaseYM(p);for(var y in p.pay){for(var m=1;m<=12;m++){if(y==CUR_Y&&m>CUR_M)continue;if(+y<ls.y||(+y===ls.y&&m<ls.m))continue;total++;if(p.pay[y][m]){paid++;sum+=p.pay[y][m];}}}return{paid:paid,total:total,sum:sum,rate:total?Math.round(paid/total*100):0};}
+function payStats(p){var paid=0,total=0,sum=0;if(!p.pay)return{paid:0,total:0,sum:0,rate:0};var ls=leaseYM(p);for(var y in p.pay){for(var m=1;m<=12;m++){if(y==CUR_Y&&m>CUR_M)continue;if(+y<ls.y||(+y===ls.y&&m<ls.m))continue;total++;if(p.pay[y][m]){paid++;sum+=p.pay[y][m];}}}var allSum=0;for(var y2 in p.pay)for(var m2 in p.pay[y2])allSum+=p.pay[y2][m2]||0;return{paid:paid,total:total,sum:allSum,rate:total?Math.round(paid/total*100):0};}
 
 /* ---------- nav ---------- */
 function renderNav(){var c=document.querySelector(".page.active"),act=c?c.id:"home";
@@ -785,7 +788,11 @@ function deckCard(p,cls){var si=statusInfo(p);
   +'<div class="dtop"><span class="badge '+si[0]+'">'+si[1]+'</span><div class="dbm">'+svg(I2.bookmark,1.8)+'<i class="'+si[0]+'"></i></div></div>'
   +'<div class="dbot"><div class="dt">'+esc(p.title)+'</div><div class="drow"><div class="dm"><span>'+svg(I2.area,2)+(p.area||"—")+' '+t("m2")+'</span><span>'+svg(I.pin,2)+esc(p.addr)+'</span></div><div class="dp">'+priceHtml(p)+'</div></div></div></div>';}
 function rentTotal(){var s=0;S.props.forEach(function(p){if(p.type!=="construction"&&p.status==="ok"&&p.rent>0)s+=p.rent;});return s;}
-function homeTiles(){return '<div class="htiles stagger"><div class="ht"><span class="ht-ic">'+svg(I.home,1.8)+'</span><div><small>'+t("homeObjs")+'</small><b>'+S.props.length+'</b></div></div><div class="ht"><span class="ht-ic">'+svg(I.coins,1.8)+'</span><div><small>'+t("homeRent")+'</small><b>'+money(rentTotal())+'</b></div></div></div>';}
+function investYear(){var a=0;S.props.forEach(function(p){if(p.type==="construction"&&p.periods)p.periods.forEach(function(x){if(x.paid&&parseInt((x.date||"").split(".")[2])===CUR_Y)a+=x.amount||0;});});return a;}
+function htile(ic,lab,val,cls){return '<div class="ht'+(cls?" "+cls:"")+'"><span class="ht-ic">'+svg(ic,1.8)+'</span><div><small>'+lab+'</small><b>'+val+'</b></div></div>';}
+function homeTiles(){return '<div class="htiles stagger">'+htile(I.home,t("homeObjs"),S.props.length)+htile(I.coins,t("homeRent"),money(rentTotal()))
+ +htile(I.wallet,t("homeRentYear"),money(yearIncome(CUR_Y)))+htile(I.doc,t("homeTaxYear"),money(taxIn(S.props,CUR_Y,0)))
+ +htile(I.crane,t("homeInvYear"),money(investYear()),"wide")+'</div>';}
 function renderHome(){
  var list=homeList();if(homeIdx>=list.length)homeIdx=Math.max(0,list.length-1);
  var tabs=[["all",t("all")],["leased",t("leased")],["no",t("vacant")],["construction",t("construction")]];
@@ -860,14 +867,15 @@ function selProps(){return finSel?S.props.filter(function(p){return finSel.index
 function expEur(e){return e.cur==="MDL"?(e.amount||0)/RATE:(e.amount||0);}
 function expList(list,y,m,general){var ids=list.map(function(p){return p.id;});return (S.expenses||[]).filter(function(e){var okP=e.propId?ids.indexOf(e.propId)>-1:general;return okP&&(!y||e.y===y)&&(!m||e.m===m);});}
 function incomeIn(list,y,m){var s=0;list.forEach(function(p){if(p.pay&&p.pay[y]){if(m)s+=(p.pay[y][m]||0);else for(var k in p.pay[y])s+=p.pay[y][k]||0;}});return s;}
-function taxIn(list,y,m){var s=0;list.forEach(function(p){if(p.tax&&p.tax.on&&p.pay&&p.pay[y]){if(m){if(p.pay[y][m])s+=taxMonthly(p);}else s+=taxMonthly(p)*Object.keys(p.pay[y]).filter(function(k){return p.pay[y][k];}).length;}});return s;}
+function taxIn(list,y,m){var s=0;list.forEach(function(p){if(!(p.tax&&p.tax.on))return;var tm=taxMonthly(p);if(m)s+=tm*taxDue(p,y,m);else for(var k=1;k<=12;k++)s+=tm*taxDue(p,y,k);});return s;}
 function periodCalc(list,y,m,general){var g=incomeIn(list,y,m),tx=taxIn(list,y,m),ex=0;expList(list,y,m,general).forEach(function(e){ex+=expEur(e);});return{gross:g,tax:tx,exp:ex,net:g-tx-ex};}
-function allYearsOf(list){var o={};list.forEach(function(p){if(p.pay)for(var y in p.pay)o[y]=1;});return Object.keys(o).map(Number);}
+function allYearsOf(list){var o={};list.forEach(function(p){if(p.pay)for(var y in p.pay)o[y]=1;var t0=taxSinceIdx(p);if(t0!=null)for(var y2=Math.floor((t0-1)/12);y2<=CUR_Y;y2++)o[y2]=1;});return Object.keys(o).map(Number);}
 function allCalc(list,general){var g=collectedL(list),tx=0,ex=0;allYearsOf(list).forEach(function(y){tx+=taxIn(list,y,0);});expList(list,0,0,general).forEach(function(e){ex+=expEur(e);});return{gross:g,tax:tx,exp:ex,net:g-tx-ex};}
-function recoupCard(cur,inv){var pg=inv?Math.round(cur.gross/inv*100):0,pn=inv?Math.round(cur.net/inv*100):0,left=Math.max(0,inv-cur.gross),w=Math.max(0,Math.min(100,pg));
- return '<div class="card stagger recoup"><div class="rc-h"><b>'+t("recoup")+'</b><span>'+(inv?pg+"%":"—")+'</span></div><div class="rc-bar"><i style="width:'+w+'%"></i></div>'
+function pctF(v){return String(Math.round(v*10)/10).replace(".",",");}
+function recoupCard(cur,inv){var pg=inv?Math.round(cur.gross/inv*1000)/10:0,left=Math.max(0,inv-cur.gross),w=Math.max(0,Math.min(100,pg));
+ return '<div class="card stagger recoup"><div class="rc-h"><b>'+t("recoup")+'</b><span>'+(inv?pctF(pg)+"%":"—")+'</span></div><div class="rc-bar"><i style="width:'+w+'%"></i></div>'
   +'<div class="rc-g"><div><small>'+t("purchaseCost")+'</small><b>'+money(inv)+'</b></div><div><small>'+t("collectedAll")+'</small><b>'+money(cur.gross)+'</b></div><div><small>'+t("remain")+'</small><b>'+money(left)+'</b></div></div>'
-  +'<div class="rc-n">'+t("recoupNet")+': <b>'+(inv?pn+"%":"—")+'</b></div></div>';}
+  +'</div>';}
 function yearIncomeL(list,y){return incomeIn(list,y,0);}
 function collectedL(list){var s=0;list.forEach(function(p){if(p.pay){for(var y in p.pay)for(var m in p.pay[y])s+=p.pay[y][m]||0;}});return s;}
 function investedL(list){var s=0;list.forEach(function(p){s+=(p.purchase||p.dealAmount||0);});return s;}
@@ -885,7 +893,7 @@ function renderFinance(){
  var prev=month?(finMonth>1?periodCalc(ps,finYear,finMonth-1,all):periodCalc(ps,finYear-1,12,all)):periodCalc(ps,finYear-1,0,all);
  var chg=(!whole&&prev.gross>0)?Math.round((cur.gross-prev.gross)/prev.gross*100):null;
  var label=whole?t("allTime"):(month?mName(finMonth)+" "+finYear:""+finYear);
- var inv=investedL(ps),mv=marketL(ps),growth=inv?Math.round((mv-inv)/inv*100):0,payback=inv?Math.round((collectedL(ps)+mv-inv)/inv*100):0;
+ var inv=investedL(ps),mv=marketL(ps),growth=inv?Math.round((mv-inv)/inv*100):0,payback=inv?Math.round(collectedL(ps)/inv*1000)/10:0;
  var exps=expList(ps,whole?0:finYear,pm,all).sort(function(a,b){return (b.y*12+b.m)-(a.y*12+a.m)||b.id-a.id;});
  var expRows=exps.map(function(e){var ki=kindInfo(e.kind),pr=e.propId?byId(e.propId):null;return '<div data-exp="'+e.id+'" style="cursor:pointer;">'+flowRow(ki[0],"rgba(227,109,93,.14)","var(--red)",ki[1]+(e.note?" · "+esc(e.note):""),(pr?esc(pr.title):t("generalObj"))+" · "+pad(e.m)+"."+e.y,"-"+money(expEur(e)),"minus")+'</div>';}).join("");
  el("fin").innerHTML=
@@ -897,7 +905,7 @@ function renderFinance(){
  +'<div class="inv3 stagger">'
    +'<div class="invb"><b>'+moneyShort(inv)+'</b><span>'+t("investAmount")+'</span></div>'
    +'<div class="invb"><b>'+moneyShort(mv)+'</b><span>'+t("currentValue")+'</span><div class="gr">▲ '+growth+'% '+t("capGrowth")+'</div></div>'
-   +'<div class="invb"><b>'+payback+'%</b><span>'+t("payback")+'</span></div>'
+   +'<div class="invb"><b>'+pctF(payback)+'%</b><span>'+t("payback")+'</span></div>'
  +'</div>'
  +(whole?recoupCard(cur,inv):"")+'<div class="sec stagger"><h3>'+t("cashflow")+'</h3><a id="addExp">+ '+t("addExpense")+'</a></div>'
  +'<div class="card stagger" style="padding:6px 18px;">'
@@ -1034,7 +1042,7 @@ function detailRented(p){
  var ten=p.tenant&&p.status==="ok"
   ?'<div class="tenant" id="tenEdit"><div class="ta">'+esc(initials(p.tenant.name))+'</div><div class="ti"><b>'+esc(p.tenant.name)+'</b><span>'+t("citizenship")+': '+esc(p.tenant.citizenship||"—")+'</span></div><div class="call">'+svg(I.phone)+'</div></div>'
   :'<div class="tenant" id="tenEdit"><div class="ta">+</div><div class="ti"><b>'+t("noTenant")+'</b><span>'+t("addTenant")+'</span></div></div>';
- var taxSub=p.tax.on?(p.tax.manual!=null?(p.tax.manual+(p.tax.cur==="MDL"?" L":" €")+" · "+t("taxManual")):t("taxAuto")):"—";
+ var taxSub=p.tax.on?((p.tax.manual!=null?(p.tax.manual+(p.tax.cur==="MDL"?" L":" €")+" "+t("taxPerMo")):t("taxAuto"))+(p.tax.since?" · "+t("taxFrom")+" "+p.tax.since:"")):"—";
  var st=payStats(p),sy=syOf(p);
  var desc=p.note||((p.tenant&&p.status==="ok"?p.tenant.name+" · ":"")+t("leaseStart")+" "+(p.startDate||"—")+" · "+t("payDay")+" "+(p.payDay||5)+" "+t("ofMonth"));
  var amen='<div class="amen">'+amenBox(I.zap,t("utilities"),p.utils)+amenBox(I.tool,t("repair"),p.repair)+amenBox(I.tax,t("rentalTax"),p.tax.on)+amenBox(I.user,t("tenant"),!!(p.tenant&&p.status==="ok"))+'</div>';
@@ -1043,7 +1051,7 @@ function detailRented(p){
   +factRow(t("area"),(p.area||"—")+' '+t("m2"))+factRow(t("rentMo"),money(p.rent),"rent")
   +factRow(t("yieldL"),p.purchase?Math.round(p.rent*12/p.purchase*100*10)/10+"%":"—")
   +factRow(t("purchasePrice"),money(p.purchase),"purchase")+factRow(t("marketPrice"),money(p.market),"market")
-  +factRow(t("payback"),objPayback(p)+"%")+'</div>'
+  +factRow(t("payback"),pctF(objPayback(p))+"%")+factRow(t("taxPaidTotal"),money(taxTotalOf(p)))+'</div>'
   +'<h4 class="dh">'+t("tenant")+'</h4>'+ten
   +'<h4 class="dh">'+t("uploadComplex")+'</h4><div class="complex-ph" id="cph" '+(p.complex?'style="background-image:url('+p.complex+')"':"")+'>'+(p.complex?"":svg(I.cam)+t("uploadComplex"))+'</div>'
   +'<h4 class="dh">'+t("utilities")+' · '+t("rentalTax")+'</h4>'
@@ -1063,7 +1071,7 @@ function detailConstruction(p){
  return '<div class="d-body">'+detailHead(p,desc,'')
   +'<div class="card" style="margin-bottom:6px;"><div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;"><span>'+t("totalInst")+'</span><span>'+money(paidSum)+' / '+money(p.dealAmount)+'</span></div><div class="progress"><i style="width:'+pct+'%"></i></div><div style="font-size:11px;color:var(--muted);">'+paidN+' / '+p.periods.length+'</div></div>'
   +'<h4 class="dh">'+t("factsTitle")+'</h4><div class="facts">'
-  +factRow(t("area"),(p.area||"—")+' '+t("m2"))+factRow(t("marketPrice"),money(p.market),"market")+factRow(t("payback"),objPayback(p)+"%")
+  +factRow(t("area"),(p.area||"—")+' '+t("m2"))+factRow(t("marketPrice"),money(p.market),"market")+factRow(t("payback"),pctF(objPayback(p))+"%")
   +factRow(t("dealAmount"),money(p.dealAmount),"dealAmount")+factRow(t("monthly"),money(p.monthly),"monthly")+factRow(t("firstInst"),p.firstInst,"firstInst")+'</div>'
   +'<h4 class="dh">'+t("uploadComplex")+'</h4><div class="complex-ph" id="cph" '+(p.complex?'style="background-image:url('+p.complex+')"':"")+'>'+(p.complex?"":svg(I.cam)+t("uploadComplex"))+'</div>'
   +'<h4 class="dh">'+t("editPeriods")+'</h4><div class="card periods" style="padding:4px 16px;">'+rows+'</div>'
@@ -1120,13 +1128,22 @@ function editPayment(p,y,m){
  el("shBody").querySelectorAll("[data-ps]").forEach(function(b){b.onclick=function(){stt=+this.getAttribute("data-ps");el("shBody").querySelectorAll("[data-ps]").forEach(function(z){z.classList.remove("on");});this.classList.add("on");if(stt===0)el("payAmt").value="";else if(!el("payAmt").value)el("payAmt").value=p.rent;};});
  el("paySave").onclick=function(){var v=parseFloat(el("payAmt").value);if(!p.pay[y])p.pay[y]={};if(stt===0||!v){delete p.pay[y][m];}else{p.pay[y][m]=v;if(!p.payDates[y])p.payDates[y]={};p.payDates[y][m]=el("payDate").value;}closeSheet();renderDetail();renderHome();renderFinance();save();};
 }
+function yearMonths(p,y){var ls=leaseYM(p),first=(y===ls.y)?ls.m:1,last=(y==CUR_Y)?CUR_M:12;if(first>last)first=1;return{first:first,last:last,n:last-first+1};}
 function bulkFillYear(p,y){
- var lim=(y==CUR_Y)?CUR_M:12;
+ var ym=yearMonths(p,y),cur=0,mode="year";if(p.pay[y])for(var k in p.pay[y])cur+=p.pay[y][k]||0;
  openSheet(t("fillYear")+" "+y,
-  fld(t("amount")+" / "+t("mo")+" (€)","number","byAmt",p.rent)
-  +'<div style="font-size:12px;color:var(--muted);margin:-6px 0 14px;line-height:1.5;">'+t("distributeYear")+' ('+lim+' '+(y==CUR_Y?t("mo"):t("mo"))+'). '+t("yearTotalHint")+'</div>'
+  '<div class="seg" id="byMode" style="margin:0 0 14px;"><button data-bm="year" class="on">'+t("modeYear")+'</button><button data-bm="month">'+t("modeMonth")+'</button></div>'
+  +fld(t("yearSumLbl"),"number","byAmt",cur||Math.round((p.rent||0)*ym.n)||"")
+  +'<div id="byHint" style="font-size:12px;color:var(--muted);margin:-6px 0 14px;line-height:1.5;"></div>'
   +'<button class="sh-save" id="byFill">'+svg(I.tick,3)+' '+t("fillYear")+'</button><button class="sh-del" id="byClear">'+t("delete")+' '+y+'</button>');
- el("byFill").onclick=function(){var v=parseFloat(el("byAmt").value)||p.rent;p.pay[y]={};for(var m=1;m<=lim;m++)p.pay[y][m]=v;closeSheet();renderDetail();renderHome();renderFinance();save();};
+ function hint(){el("byHint").textContent=mode==="year"?t("yearFillHint").replace("{n}",ym.n):ym.n+" "+t("mo")+" · "+t("yearTotalHint");}
+ hint();
+ el("byMode").querySelectorAll("button").forEach(function(b){b.onclick=function(){mode=this.getAttribute("data-bm");el("byMode").querySelectorAll("button").forEach(function(z){z.classList.remove("on");});this.classList.add("on");
+  el("byAmt").parentNode.querySelector("label").textContent=mode==="year"?t("yearSumLbl"):t("perMonthLbl");el("byAmt").value=mode==="year"?(cur||Math.round((p.rent||0)*ym.n)||""):(p.rent||"");hint();};});
+ el("byFill").onclick=function(){var v=parseFloat(el("byAmt").value);if(!(v>0))return;p.pay[y]={};
+  if(mode==="year"){var vc=Math.round(v*100),bc=Math.floor(vc/ym.n);for(var m=ym.first;m<=ym.last;m++)p.pay[y][m]=(m===ym.last?vc-bc*(ym.n-1):bc)/100;}
+  else{for(var m2=ym.first;m2<=ym.last;m2++)p.pay[y][m2]=v;}
+  closeSheet();renderDetail();renderHome();renderFinance();save();};
  el("byClear").onclick=function(){p.pay[y]={};closeSheet();renderDetail();renderHome();renderFinance();save();};
 }
 function editPeriod(p,i){var x=p.periods[i];
@@ -1149,15 +1166,17 @@ function editTenant(p){
 }
 function editTax(p){
  openSheet(t("rentalTax"),
-  '<div class="opt" style="margin-bottom:14px;"><div class="oi">'+svg(I.tax)+'</div><div class="ol"><b>'+t("rentalTax")+'</b><span>'+t("taxAuto")+'</span></div><div class="sw '+(p.tax.on?"on":"")+'" id="txSw"></div></div>'
-  +fld(t("amount")+" ("+t("taxManual")+")","number","txAmt",p.tax.manual!=null?p.tax.manual:"")
+  '<div class="opt" style="margin-bottom:14px;"><div class="oi">'+svg(I.tax)+'</div><div class="ol"><b>'+t("rentalTax")+'</b><span>'+(p.tax.manual!=null?t("taxManual"):t("taxAuto"))+'</span></div><div class="sw '+(p.tax.on?"on":"")+'" id="txSw"></div></div>'
+  +fld(t("taxFixed"),"number","txAmt",p.tax.manual!=null?p.tax.manual:"")
   +'<label style="font-size:12px;font-weight:700;color:var(--muted);display:block;margin:-6px 0 7px;">'+'€ / MDL'+'</label>'
   +'<div class="seg" id="txCur" style="margin-bottom:14px;"><button data-c="EUR" class="'+(p.tax.cur==="EUR"?"on":"")+'">EUR</button><button data-c="MDL" class="'+(p.tax.cur==="MDL"?"on":"")+'">MDL (леи)</button></div>'
+  +fld(t("taxSince"),"text","txSince",p.tax.since||"")
+  +'<div style="font-size:12px;color:var(--muted);margin:-6px 0 14px;line-height:1.5;">'+t("taxSinceHint")+'</div>'
   +'<button class="sh-save" id="txS">'+t("save")+'</button>');
  var on=p.tax.on,cur=p.tax.cur;
  el("txSw").onclick=function(){on=!on;this.classList.toggle("on",on);};
  el("txCur").querySelectorAll("button").forEach(function(b){b.onclick=function(){cur=this.getAttribute("data-c");el("txCur").querySelectorAll("button").forEach(function(z){z.classList.remove("on");});this.classList.add("on");};});
- el("txS").onclick=function(){p.tax.on=on;p.tax.cur=cur;var v=el("txAmt").value;p.tax.manual=v===""?null:(parseFloat(v)||null);closeSheet();renderDetail();renderFinance();};
+ el("txS").onclick=function(){p.tax.on=on;p.tax.cur=cur;var v=el("txAmt").value;p.tax.manual=v===""?null:(parseFloat(v)||null);var sv=el("txSince").value.trim();p.tax.since=sv;if(sv&&taxSinceIdx(p)==null){p.tax.since="";}closeSheet();renderDetail();renderHome();renderFinance();save();};
 }
 function editLease(p){
  openSheet(t("leaseStart"),
