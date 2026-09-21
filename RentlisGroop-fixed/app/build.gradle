@@ -1,0 +1,49 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+android {
+    namespace 'md.rentlis.groop'
+    compileSdk 34
+
+    // Fixed signing key: every build is signed the same way, so a new APK installs
+    // over the old one (no uninstall, data is kept). Keep app/rentlis.jks safe.
+    signingConfigs {
+        rentlis {
+            storeFile file('rentlis.jks')
+            storePassword 'rentlis2026'
+            keyAlias 'rentlis'
+            keyPassword 'rentlis2026'
+        }
+    }
+
+    defaultConfig {
+        applicationId "md.rentlis.groop"
+        minSdk 26
+        targetSdk 34
+        // versionCode must grow with every release; the cloud build number keeps it increasing automatically
+        versionCode 100 + (System.getenv("GITHUB_RUN_NUMBER") ?: "0").toInteger()
+        versionName "1.6"
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.rentlis
+        }
+        release {
+            signingConfig signingConfigs.rentlis
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions { jvmTarget = '17' }
+}
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.webkit:webkit:1.11.0'
+    implementation 'androidx.biometric:biometric:1.1.0'
+}

@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.RentlisGroop" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">#082B23</item>
+        <item name="android:navigationBarColor">#082B23</item>
+        <item name="android:windowBackground">#082B23</item>
+    </style>
+</resources>
